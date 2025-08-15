@@ -71,6 +71,45 @@
   <footer>
     <p id="footer-text">&copy; 2025 Práctica con DummyJSON API</p>
   </footer>
+
+  <h1 id="miMorral">Mi morral</h1>
+
+  <script>
+    let objetoMorral = {
+        "tipo": "Deportiva",
+        "estilo": "Para escalar",
+        "color" : "red",
+        "tamaño": "madiano",
+        "Sus caracteristicas": [
+            {
+                "Ropa": "caben 5 chates y dos pantalones",
+                "Resistecia": "Puede aguantar un maximo peso de 10 kilos ",
+                "comodidad": "alta",
+            },
+            {
+              "bolsillo": "bolsa para liquidos",
+              "tubo": "pitillo para tomar los liquidos",
+            },
+        ]
+    }
+
+    console.log(objetoMorral);
+    document.getElementById("miMorral").style.color = objetoMorral.color;     
+    if (objetoMorral.tamano == "pequeño") {
+        document.getElementById("miMorral").style.fontSize = "0.5rem";
+    } else if (objetoMorral.tamano == "mediano") {
+        document.getElementById("miMorral").style.fontSize = "1rem";
+    } else if (objetoMorral.tamano == "grande") {
+        document.getElementById("miMorral").style.fontSize = "2rem";
+    }
+
+    // document.getElementById("colorobjetoMorral").innerHTML = "Color del objetoMorral:" + objetoMorral.color;
+    /*
+    document.getElementById("contenidoobjetoMorral").innerHTML = objetoMorral.contenido.map(item => {
+        return <p>${item.tipo}: ${item.titulo} por ${item.autor}</p>;
+    }).join("");
+    */
+</script>
   
   <script src="script.js"></script>
 </body>
